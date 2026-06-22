@@ -1,0 +1,17 @@
+{
+  "comment": "Node-side code (server + CLI). DOM is deliberately absent so setTimeout/setInterval resolve to Node's overloads (with .unref()). The browser frontend uses tsconfig.browser.json.",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022"],
+    "types": ["node"],
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/server.ts", "src/cli.ts", "src/types.ts"]
+}

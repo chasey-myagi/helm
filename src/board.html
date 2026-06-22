@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>helm</title>
+<script>try{var t=localStorage.getItem("helm-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+<style>/*INLINE_CSS*/</style>
+</head>
+<body>
+
+<div class="banner" id="banner">连接断开 · 进程可能已收尾。数据仍保存在磁盘上。</div>
+<div class="topline"><i id="topfill"></i></div>
+
+<header>
+  <div class="h-left">
+    <span class="h-title" id="h-title">helm</span>
+    <span class="h-task" id="h-task"></span>
+  </div>
+  <div class="h-right">
+    <span class="h-stat" id="h-state"></span>
+    <span class="h-stat" id="h-upd"></span>
+    <button class="iconbtn" id="btn-theme" title="切换主题">◐</button>
+    <button class="iconbtn" id="btn-pause" title="暂停自动刷新">⏸</button>
+  </div>
+</header>
+
+<div class="empty" id="empty">等待数据… 进程已就绪。<br>用 <code>helm status / step / event …</code> 开始更新这块看板。</div>
+
+<div class="wrap" id="wrap" style="display:none">
+  <aside class="col-left">
+    <div id="l-top"></div>
+
+    <section class="steer" id="l-steer" style="display:none">
+      <div class="eyebrow">✎ 你的操舵 · 可编辑</div>
+      <div class="field">
+        <label>目标</label>
+        <div class="box goal" id="f-goal" contenteditable="true" data-ph="这个任务要达成什么…"></div>
+      </div>
+      <div class="field">
+        <label>操舵指令</label>
+        <div class="box steer-note" id="f-steer" contenteditable="true" data-ph="给 agent 的方向 / 约束，如「先跑 staging」「别动 schema」…"></div>
+      </div>
+      <div class="steer-foot" id="steer-foot">
+        <span class="hint" id="steer-hint"><span class="d"></span>—</span>
+        <button class="savebtn" id="steer-save">保存</button>
+      </div>
+    </section>
+
+    <div id="l-needs"></div>
+  </aside>
+
+  <main class="col-right" id="r-main"></main>
+  <footer id="foot"></footer>
+</div>
+
+<dialog class="lightbox" id="lightbox"><img alt=""><div class="cap"></div></dialog>
+
+<script>/*INLINE_JS*/</script>
+</body>
+</html>

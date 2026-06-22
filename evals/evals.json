@@ -1,0 +1,26 @@
+{
+  "skill_name": "helm",
+  "evals": [
+    {
+      "id": 0,
+      "name": "live-board-url-shortener",
+      "prompt": "帮我写一个小的 URL 短链服务(Node,内存存储:POST /shorten 返回短码,GET /:code 跳转,再加两三个测试)。分几步做,边做边给我一个能实时看进度的看板,有要我拍板的就提出来。",
+      "expected_output": "Agent builds a small working URL shortener (server + tests) AND keeps a helm board updated throughout: inits with a goal, lays out a plan, advances steps, logs ok/warn events, records at least one decision, surfaces a genuine question via `ask`, finishes with `done`.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "away-steering-notes-cli",
+      "prompt": "我大概离开 15 分钟。帮我从零搭一个 Python 命令行 'notes' 工具(add / list / search,存到本地 JSON 文件,带测试),一步步来,并弄个看板让我回来能一眼看到进度、必要时还能给你改方向。",
+      "expected_output": "Agent scaffolds a working Python notes CLI with tests AND keeps a helm board: sets the goal so the human can steer, plans + advances steps, and at a checkpoint runs `helm goal` to re-read steering before proceeding. Board reflects progress at a glance.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "follow-live-decision-sorter",
+      "prompt": "我想边写边跟着看你的进度,而且中间大概有个设计上的选择我要拍板。帮我把一段排序逻辑做成一个有测试的小模块:实现一个可配置的多字段排序器(支持升降序、null 排前/后)。",
+      "expected_output": "Agent builds a tested multi-field sorter module AND keeps a helm board, surfacing the real design decision via `ask` (and/or recording it via `decide`, flagging unconfirmed assumptions). Plan/steps/events track the work; finishes with `done`.",
+      "files": []
+    }
+  ]
+}
