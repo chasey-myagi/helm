@@ -4,6 +4,8 @@
 > A live, *steerable* board your agent keeps while it works. Glance at it; grab the wheel any time.
 > <sub>实时可操舵的单任务看板:agent 干活时你看着,随时改目标,它下一步就跟上。</sub>
 
+**English** | [中文](README.zh-CN.md)
+
 ![Agent Skill](https://img.shields.io/badge/Agent-Skill-7c5cd0)
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-%E2%9C%93-d97757)
 ![Codex](https://img.shields.io/badge/Codex-%E2%9C%93-2b8fb0)
